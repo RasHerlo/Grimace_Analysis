@@ -1,0 +1,40 @@
+# Structure of the report: chapters and the questions that get a subsection.
+# Keep in sync with RESEARCH_QUESTIONS.md (that file is the source of truth for the wording).
+# Analyses attach to a question via `questions=[...]` in their Block; questions without a block are
+# listed as "not analysed yet".
+
+chapters:
+  - id: D
+    title: "Data and quality control"
+    intro: "What is in the dataset, how much of it is usable, and what limits the analyses that follow."
+  - id: S
+    title: "Action units versus the total score"
+    intro: "Sub-questions on whether individual units, or combinations of them, are more informative than the summed Total Grimace Score."
+  - id: A
+    title: "Part A: subclusters (states) of the 4-unit vector"
+    intro: "Do the [Orbital, Nose, Ears, Whiskers] vectors form recurring subclusters over time, and do their covariations carry more information than the total?"
+  - id: B
+    title: "Part B: transitions and prediction"
+    intro: "Do some states follow each other with high probability, and can a state be predicted before it occurs?"
+
+questions:
+  - {id: D1, chapter: D, short: "What is in the dataset?", text: "Which recordings and mice exist, how do they map to the overview Excel, and what do the raw scores look like?"}
+  - {id: D2, chapter: D, short: "Unscorable frames (-1)", text: "How much of the data is unscorable (score -1), is that missingness random, and how does model confidence behave?"}
+
+  - {id: Q1, chapter: S, short: "Units/combinations vs groups", text: "Do individual action units, or combinations of them, separate the groups better than the total score? Which carry the Levcromakalim effect, and does that differ by genotype?"}
+  - {id: Q2, chapter: S, short: "Does the total hide effects?", text: "Does the total score hide effects, for example when units move in opposite directions or one unit dominates?"}
+  - {id: Q3, chapter: S, short: "Correlation between units", text: "How correlated are the four units with each other? Is the total score redundant, or does it mix distinct signals?"}
+  - {id: Q4, chapter: S, short: "Time course within a session", text: "Do the units differ in their time course within a session (onset, persistence)?"}
+  - {id: Q5, chapter: S, short: "Consistency across sex/cohort", text: "Are the effects consistent across sex and cohort?"}
+  - {id: Q6, chapter: S, short: "Reliability of each unit", text: "How reliable is each unit (model confidence, baseline variability, test-retest)?"}
+
+  - {id: A1, chapter: A, short: "Over/under-represented patterns", text: "Which unit combinations occur more (or less) often than expected if the units were independent?"}
+  - {id: A2, chapter: A, short: "Recurring states and profiles", text: "Is there a small number of recurring states, and what are their profiles?"}
+  - {id: A3, chapter: A, short: "States vs groups, compared to total", text: "Do the states separate baseline vs stimulated, Vehicle vs Levcromakalim and Cre+ vs Cre- better than the total score?"}
+  - {id: A4, chapter: A, short: "What the total discards", text: "What does the total score discard (different states that map to the same total)?"}
+
+  - {id: B1, chapter: B, short: "Likely transitions", text: "Which transitions between states are more likely than expected from state frequencies alone?"}
+  - {id: B2, chapter: B, short: "Transitions/dwell times by group", text: "Do transition structure and dwell times differ between groups (drug, genotype, baseline vs stimulated)?"}
+  - {id: B3, chapter: B, short: "Do some units lead others?", text: "Do some units lead others (a change in one unit precedes changes in the others)?"}
+  - {id: B4, chapter: B, short: "Predicting state onset", text: "Can the onset of a state be predicted k seconds ahead, better than a 'same as now' baseline?"}
+  - {id: B5, chapter: B, short: "Baseline predicts response?", text: "Does a mouse's baseline dynamics predict its response after stimulation?"}

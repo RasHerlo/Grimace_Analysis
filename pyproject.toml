@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grimace"
+version = "0.1.0"
+description = "Analysis of mouse grimace-scale data (Nav1.8 / Piezo2 / Levcromakalim)"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "pandas",
+    "pyarrow",
+    "openpyxl",
+    "pyyaml",
+    "matplotlib",
+    "scipy",
+    "statsmodels",
+    "scikit-learn",
+    "reportlab",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

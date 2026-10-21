@@ -1,0 +1,11 @@
+# Raw data stays on D:, it is never copied into the repo.
+data_root: "D:/Nav1.8_Piezo2_Levcro"
+overview_xlsx: "Grimace Nav1.8 Piezo2 Levcromakalim data overview.xlsx"
+baseline_dir: "Baselines/Raw data"
+stimulated_dir: "Stimulated/Raw data"
+
+# Derived data (git-ignored)
+cache_dir: "data/cache"
+
+# Action units scored by the model (Cheek is not scored in this dataset)
+action_units: ["Orbital", "Nose", "Ears", "Whiskers"]

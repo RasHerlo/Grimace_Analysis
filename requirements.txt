@@ -1,0 +1,25 @@
+# Pinned to the versions the analysis was developed with (Python 3.11).
+# Build / update the environment (Windows PowerShell):
+#   python -m venv .venv
+#   .\.venv\Scripts\Activate.ps1
+#   python -m pip install -r requirements.txt
+#   python -m pip install -e . --no-deps --no-build-isolation   # our own package (src/grimace)
+# macOS / Linux: source .venv/bin/activate
+#
+# To upgrade a package: change its pin here, re-run the install, run the scripts, then commit.
+# Keep the dependency list in pyproject.toml in sync with this file.
+
+# Build tools (needed for the offline-friendly editable install of src/grimace)
+setuptools>=64
+wheel
+
+numpy==1.26.4
+pandas==2.1.4
+pyarrow==14.0.2
+openpyxl==3.0.10
+PyYAML==6.0.1
+matplotlib==3.8.0
+scipy==1.11.4
+statsmodels==0.14.0
+scikit-learn==1.2.2
+reportlab==5.0.1
